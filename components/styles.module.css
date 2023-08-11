@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display:ital@1&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lora&family=Playfair+Display:ital@1&family=Poppins:wght@300&display=swap');
+
+
+
+.font {
+    font-family: 'Dancing Script',bold;
+}
+.clr{
+    font-weight: 600;
+    font-size: 50px;
+    color:#E97777;
+    text-align: center;
+    margin-top: 40px;
+    width: 100%;
+    font-family:'Dancing Script';
+}
+.container {
+    background: white;
+    padding: 20px 50px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Omogućuje prelazak elemenata u novi red ako nema dovoljno prostora */
+    gap: 20px; /* Ovo dodaje razmak između linkova */
+    justify-content: center; /* Centriranje elemenata horizontalno */
+    color:#E97777;
+  }
+  
+  .links li {
+    padding: 0;
+    margin: 0;
+    color:#E97777;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+  }
+  
+.icons {
+    display: flex;
+    gap: 20px; /* Ovo dodaje razmak između ikona */
+    justify-content: center; /* Centriranje ikona horizontalno */
+    transform:scale(1.8);
+    color:#E97777
+  }
+  
+#footer {
+    margin-top: 20px; /* Ovo dodaje razmak između linkova/ikona i footera */
+    color:#E97777;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+  }
+
+
+
+

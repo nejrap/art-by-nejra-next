@@ -2,26 +2,393 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+
+
+/* Stil za logo */
+#navimg {
+  width: 150px;
+  border-radius: 20px; 
+  
+}
+.nav {
+  display:flex;
+  padding: 20px 60px;
+  justify-content: space-between;
+ align-items: center; 
+}
+/* Stil za nav linkove */
+.nav-links {
+  flex: 1;
+  text-align: right;
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  margin-left: 20px; /* Dodajemo margin s lijeve strane kako bi bili udaljeni od početka */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end; /* Poravnavamo linkove s desne strane */
+}
+
+.nav-links ul li {
+  padding: 8px 12px;
+  color: #E9967A;
+  font-size: 16px;
+}
+
+.nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.text-box {
+  width: 90%;
+  color: #E97777;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text-box h1{
+  font-size:60px;
+  font-weight: 600;
+    font-size: 50px;
+    color:#E97777;
+    text-align: center;
+  margin-top:272px;
+  
+}
+.text-box p{
+  margin:10px 0 40px;
+  font-size:30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.header {
+  min-height: 100vh;
+  width: 100;
+  background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url(/pozadina.png);
+  background-position: center;
+  background-size: cover;
+  background-position: fixed;
+  position: relative;
+}
+
+
+/*ABOUT */
+.onama{
+  width: 80%;
+  margin:auto;
+  text-align: center;
+  padding-top:100px;
+  font-size:60px;
+  font-weight: 600;
+    font-size: 50px;
+    color:#E97777;
+   
+ 
+}
+#onama{
+  width:400px;
+}
+.onama p{
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  
+}
+.row {
+  margin-top:5%;
+  display:flex;
+  gap: 50px;
+  justify-content: space-between;
+}
+.col {
+  flex-basis: 60%;
+  background:#E9967A;
+  margin-bottom: 5%;
+  box-sizing: border-box;
+  padding: 20px 12px;
+  border-radius: 10px;
+  
+  
+}
+
+.col:hover {
+ box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2); 
+}
+h3 {
+  text-align: center;
+  font-weight: 400;
+  margin:10px 0;
+  color:black;
+  font-family: 'Times New Roman', Times, serif;
+}
+.col p{
+  color:black;
+  font-family: 'Lora', serif;
+  font-size:16px
+}
+/*GALERIJA*/
+.galerija {
+  width: 80%;
+  margin:40px auto 50px;
+  text-align: center;
+  padding-top:50px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-gap:30px;
+ 
+
+}
+.instagram-post-caption p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #E97777;
+  font-family:'Lora', serif;
+}
+.galerija img{
+  width:100%;
+  cursor:pointer;
+}
+.galerija-col{
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position:relative;
+  overflow:hidden;
+}
+.galerija img{
+  width: 100%;
+  cursor:pointer;
+}
+.galerija img:hover{
+  transform:scale(0.8) rotate(-15deg);
+  border-radius: 20px;
+  box-shadow: 0 32px 75px white;
+}
+/*CONTACT*/
+
+.email {
+  height: 266px;
+  width: 500px;
+  left: 50%;
+  top: 50%;
+  transform: translate(19%, -50%);
+  margin-top:-22px;
+}
+.contact h1{
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  margin:0 auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: 'Dancing Script';
+  color:#E97777;
+  font-weight: 600;
+  font-size: 50px;
+  
+}
+.contact {
+  background-color:#E97777;
+  padding:100px 15%;
+  margin-top:300px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-grow: 2;
+  width: 100%;
+  
+}
+  
+  @media (min-width:2100px){
+  .shapedividers_com-8753::before{
+  background-size: 100% calc(2vw + 90px);
   }
+  }
+   
+   
+  form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+  }
+  
+.input {
+    width: 500px;
+    height: 45px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    outline: none;
+    border: 1px solid #e97777;
+    padding-top: 10px;
+    
+  }
+#textarea {
+  border:0;
+  margin-top:10 px;
+  width: 500px;
+  padding:20px;
+  outline:2px solid #E97777;
+  background:#f5f5f5;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+form button {
+    background: #e97777;
+    border: 2px solid #e97777;
+    color:#E97777;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 30px;
+  }
+#button {
+  background: #e97777;
+    border: 2px solid #e97777;
+    color:white;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-top:20px;
+    width: 300px;
+  }
+
+
+
+.contact {
+  background-color:white;
+  padding:100px 15%;
+  margin-top:150px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-grow: 2;
+  width: 100%;
+  
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+.contact h1{
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  margin:0 auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
 }
+/*ABOUT US*/
+#onama2 {
+  float:left;
+   width: 100%;
+   max-width:600px;
+   width: 600px;
+   height: 600px;
+   margin:0 auto;
+   margin-left:5px;
+   border-radius: 50%;
+}
+.desno p{
+   text-align: center;
+   font-size:20px;
+   color:#E97777;
+   line-height: 22px;
+   font-family: 'Times New Roman', Times, serif;
+}
+.desno h1{
+   font-size: 30px;
+   font-family: 'Dancing Script';
+   font-weight: 600;
+   text-align: center;
+   color:#E97777;
+}
+#about {
+  
+    font-weight: 600;
+    font-size: 50px;
+    color:#E97777;
+    text-align: center;
+    margin-top: 40px;
+    width: 100%;
+    font-family:'Dancing Script';
+}
+
+/*CONTACT*/
+/*.formcontainer {
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+form {
+  background-color:#fff;
+  display:flex;
+  flex-direction: column;
+  padding:2vw 4vw;
+  width:90%;
+  max-width:600px;
+  border-radius:10px;
+
+}
+form h1 {
+  font-weight: 600;
+  font-size: 50px;
+  color:#E97777;
+  text-align: center;
+  font-family:'Dancing Script';
+ 
+}
+form input, form textarea {
+  border:0;
+  margin:10 px 0;
+  padding:20px;
+  outline:2px solid #E97777;
+  background:#f5f5f5;
+  border-radius: 5px;
+}
+form button {
+  padding:15px;
+  background: #E97777;
+  color:#fff;
+  border:0;
+  outline:none;
+  cursor:pointer;
+  border-radius: 30px;
+  width:150px;
+  margin:20px auto 0;
+
+}
+form button:hover{
+  background:#F69D9D;
+}
+
+#ig {
+   font-size:30px;  
+}*/
