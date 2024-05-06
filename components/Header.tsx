@@ -37,6 +37,12 @@ export default function Header() {
             <li>
               <Link href="/contact">Kontakt</Link>
             </li>
+            <li>
+              <Link href="/register">Register</Link>
+            </li>
+            <li>
+              <Link href="/">Login</Link>
+            </li>
           </ul>
         </div>
       </nav>
@@ -45,8 +51,8 @@ export default function Header() {
        
         <h1 className={dancing.className}>Art by Nejra</h1>
         <p className="animate__backInLeft">
-          "Neki slikari sunce pretvaraju u žutu mrlju. Drugi žutu mrlju
-          pretvaraju u sunce." <br />
+          &Neki slikari sunce pretvaraju u žutu mrlju. Drugi žutu mrlju
+          pretvaraju u sunce.& <br />
           <br /> Pablo Picasso
         </p>
       </div>
