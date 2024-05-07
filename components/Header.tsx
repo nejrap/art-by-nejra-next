@@ -11,14 +11,14 @@ export default function Header() {
     
     <section className="header">
       <nav className="nav">
-        <div></div>
-            <img
+        <div> <img
               id="navimg"
               src="/crna.png"
               alt="Logo"
               width={150}
               height={100}
-            />
+            /></div>
+           
           
         <div className="nav-links">
           <ul>
@@ -38,7 +38,7 @@ export default function Header() {
               <Link href="/contact">Kontakt</Link>
             </li>
             <li>
-              <Link href="/register">Register</Link>
+              <Link href={'/register'}>Register</Link>
             </li>
             <li>
               <Link href="/">Login</Link>
