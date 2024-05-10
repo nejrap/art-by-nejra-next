@@ -2,22 +2,44 @@
 
 import { useState } from "react";
 
-
-import styles from "./styles.module.css"
-import Image from "next/image"
-
 export default function RegisterPage() {
+    const [fullname, setFullname] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
-    function handleFormSubmit(ev: React.FormEvent<HTMLFormElement>) {
-        ev.preventDefault();
-        fetch('/api/register', {
-            method:'POST',
-            body: JSON.stringify({email, password}),
-            headers: {'Content-Type':'application/json'},
-        });
-    }
+    console.log("Name", fullname);
+    console.log("Email", email);
+    console.log("Password", password);
+
+    const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        if (!fullname || !email || !password) {
+            setError("All fields are necessary");
+            return;
+        }
+        try {
+            const res = await fetch('api/register', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    fullname,
+                    email,
+                    password
+                }),
+            });
+            if (res.ok) {
+                const form = e.target as HTMLFormElement; // eksplicitno navođenje tipa kao HTMLFormElement
+                form.reset();
+            } else {
+                console.log("Failed");
+            }
+        } catch (error) {
+            console.log("User registration failed", error);
+        }
+    };
 
     return (
         <section className="mt-8">
@@ -26,8 +48,9 @@ export default function RegisterPage() {
             </h1>
             <br></br><br></br><br></br><br></br><br></br><br></br>
             <form className="block max-w-xs mx-auto" onSubmit={handleFormSubmit}>
-                <input value={email} onChange={ev => setEmail(ev.target.value)} type="email" placeholder="email"></input>
-                <input type="password" value={password} onChange={ev => setPassword(ev.target.value)} placeholder="password"></input>
+                <input type="text" value={fullname} placeholder="Full Name" onChange={(e) => setFullname(e.target.value)}></input>
+                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Email"></input>
+                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password"></input>
                 <button className="button-primary" type="submit">
                     Register
                 </button>

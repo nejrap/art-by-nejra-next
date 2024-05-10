@@ -19,7 +19,8 @@ export default function Header() {
               height={100}
             /></div>
            
-          
+      
+
         <div className="nav-links">
           <ul>
             <li>
@@ -41,21 +42,21 @@ export default function Header() {
               <Link href="/register">Register</Link>
             </li>
             <li>
-              <Link href="/">Login</Link>
+              <Link href="/login">Login</Link>
             </li>
           </ul>
         </div>
       </nav>
-
       <div className="text-box">
        
-        <h1 className={dancing.className}>Art by Nejra</h1>
-        <p className="animate__backInLeft">
-          &Neki slikari sunce pretvaraju u žutu mrlju. Drugi žutu mrlju
-          pretvaraju u sunce.& <br />
-          <br /> Pablo Picasso
-        </p>
-      </div>
+       <h1 className={dancing.className}>Art by Nejra</h1>
+       <p className="animate__backInLeft">
+         Neki slikari sunce pretvaraju u žutu mrlju. Drugi žutu mrlju
+         pretvaraju u sunce.<br />
+         <br /> Pablo Picasso
+       </p>
+     </div>
+      
       
     </section>
   );
