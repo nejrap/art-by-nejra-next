@@ -262,18 +262,18 @@ form button {
     cursor: pointer;
     margin-left: 30px;
   }
-#button {
-  background: #e97777;
-    border: 2px solid #e97777;
-    color:white;
-    border-radius: 30px;
-    padding: 10px 30px;
-    font-size: 15px;
-    cursor: pointer;
-    margin-left: 30px;
-    margin-top:20px;
-    width: 300px;
-  }
+  #button {
+    background: #e97777;
+      border: 2px solid #e97777;
+      color:white;
+      border-radius: 30px;
+      padding: 10px 30px;
+      font-size: 15px;
+      cursor: pointer;
+      margin-left: -36px;
+      margin-top:20px;
+      width: 300px;
+    }
 
 
 
@@ -392,3 +392,18 @@ form button:hover{
 #ig {
    font-size:30px;  
 }*/
+
+
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="text"] {
+    @apply block w-full mb-2 rounded-xl;
+    @apply border p-2 border-gray-300 bg-gray-100;
+}
+input[type="email"]:disabled,
+input[type="password"]:disabled,
+input[type="tel"]:disabled,
+input[type="text"]:disabled {
+    @apply bg-gray-300 border-0 cursor-not-allowed text-gray-500;
+}

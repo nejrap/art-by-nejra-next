@@ -10,7 +10,7 @@ export default function Contact() {
           alt="Email ikona"
         />
         <div>
-          <form>
+          <form className="form">
             <input type="email" placeholder="Vaša email adresa" required/><br/>
             <button id="button" type="submit">POTVRDI</button>
           </form>

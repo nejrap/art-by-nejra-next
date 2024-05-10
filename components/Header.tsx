@@ -38,7 +38,7 @@ export default function Header() {
               <Link href="/contact">Kontakt</Link>
             </li>
             <li>
-              <Link href={'/register'}>Register</Link>
+              <Link href="/register">Register</Link>
             </li>
             <li>
               <Link href="/">Login</Link>
